@@ -14,6 +14,18 @@ spec:
             - title: MeterSphere
               desc: MeterSphere 是一站式的开源持续测试平台，遵循 GPL v3 开源许可协议，涵盖测试跟踪、接口测试、UI 测试和性能测试等功能，全面兼容 JMeter、Selenium 等主流开源标准，有效助力开发和测试团队充分利用云弹性进行高度可扩展的自动化测试，加速高质量的软件交付。
               url: https://metersphere.io
+            - title: DataEase
+              desc: DataEase 是开源的数据可视化分析工具，帮助用户快速分析数据并洞察业务趋势，从而实现业务的改进与优化。DataEase 支持丰富的数据源连接，能够通过拖拉拽方式快速制作图表，并可以方便地与他人分享。
+              url: https://dataease.io
+            - title: JumpServer
+              desc: JumpServer 是广受欢迎的开源堡垒机，是符合 4A 规范的专业运维安全审计系统。改变世界，从一点点开始。
+              url: https://www.jumpserver.org
+            - title: KubeOperator
+              desc: KubeOperator 是一个开源的轻量级 Kubernetes 发行版，专注于帮助企业规划、部署和运营生产级别的 Kubernetes 集群。
+              url: https://kubeoperator.io 
+            - title: Halo
+              desc: 好用又强大的开源建站工具。
+              url: https://halo.run      
           children:
             - $formkit: text
               name: title
@@ -199,30 +211,6 @@ spec:
     - group: about
       label: 关于我们
       formSchema:
-        - $formkit: repeater
-          name: carousel
-          label: 轮播块
-          value:
-            - title: MeterSphere
-              desc: MeterSphere 是一站式的开源持续测试平台，遵循 GPL v3 开源许可协议，涵盖测试跟踪、接口测试、UI 测试和性能测试等功能，全面兼容 JMeter、Selenium 等主流开源标准，有效助力开发和测试团队充分利用云弹性进行高度可扩展的自动化测试，加速高质量的软件交付。
-              url: https://metersphere.io
-          children:
-            - $formkit: text
-              name: title
-              label: 标题
-              value:
-            - $formkit: text
-              name: desc
-              label: 描述
-              value:
-            - $formkit: url
-              name: url
-              label: 跳转地址
-              value:
-        - $formkit: attachment
-          name: carousel_bg_img
-          label: 轮播块背景图片
-          value: /themes/moderna-template/assets/img/hero-bg.jpg
         - $formkit: radio
           help: 这个主要是用关于我们那个自定义模版下面的配置注意啦
           name: show
@@ -386,30 +374,6 @@ spec:
     - group: service
       label: 服务
       formSchema:
-        - $formkit: repeater
-          name: carousel
-          label: 轮播块
-          value:
-            - title: MeterSphere
-              desc: MeterSphere 是一站式的开源持续测试平台，遵循 GPL v3 开源许可协议，涵盖测试跟踪、接口测试、UI 测试和性能测试等功能，全面兼容 JMeter、Selenium 等主流开源标准，有效助力开发和测试团队充分利用云弹性进行高度可扩展的自动化测试，加速高质量的软件交付。
-              url: https://metersphere.io
-          children:
-            - $formkit: text
-              name: title
-              label: 标题
-              value:
-            - $formkit: text
-              name: desc
-              label: 描述
-              value:
-            - $formkit: url
-              name: url
-              label: 跳转地址
-              value:
-        - $formkit: attachment
-          name: carousel_bg_img
-          label: 轮播块背景图片
-          value: /themes/moderna-template/assets/img/hero-bg.jpg
         - $formkit: radio
           help: 这个主要是用服务那个自定义模版下面的配置注意啦
           name: show
@@ -650,30 +614,6 @@ spec:
     - group: team
       label: 团队
       formSchema:
-        - $formkit: repeater
-          name: carousel
-          label: 轮播块
-          value:
-            - title: MeterSphere
-              desc: MeterSphere 是一站式的开源持续测试平台，遵循 GPL v3 开源许可协议，涵盖测试跟踪、接口测试、UI 测试和性能测试等功能，全面兼容 JMeter、Selenium 等主流开源标准，有效助力开发和测试团队充分利用云弹性进行高度可扩展的自动化测试，加速高质量的软件交付。
-              url: https://metersphere.io
-          children:
-            - $formkit: text
-              name: title
-              label: 标题
-              value:
-            - $formkit: text
-              name: desc
-              label: 描述
-              value:
-            - $formkit: url
-              name: url
-              label: 跳转地址
-              value:
-        - $formkit: attachment
-          name: carousel_bg_img
-          label: 轮播块背景图片
-          value: /themes/moderna-template/assets/img/hero-bg.jpg
         - $formkit: radio
           help: 这个主要是用团队那个自定义模版下面的配置注意啦
           name: show
@@ -746,30 +686,6 @@ spec:
     - group: blog
       label: 博客
       formSchema:
-        - $formkit: repeater
-          name: carousel
-          label: 轮播块
-          value:
-            - title: MeterSphere
-              desc: MeterSphere 是一站式的开源持续测试平台，遵循 GPL v3 开源许可协议，涵盖测试跟踪、接口测试、UI 测试和性能测试等功能，全面兼容 JMeter、Selenium 等主流开源标准，有效助力开发和测试团队充分利用云弹性进行高度可扩展的自动化测试，加速高质量的软件交付。
-              url: https://metersphere.io
-          children:
-            - $formkit: text
-              name: title
-              label: 标题
-              value:
-            - $formkit: text
-              name: desc
-              label: 描述
-              value:
-            - $formkit: url
-              name: url
-              label: 跳转地址
-              value:
-        - $formkit: attachment
-          name: carousel_bg_img
-          label: 轮播块背景图片
-          value: /themes/moderna-template/assets/img/hero-bg.jpg
         - $formkit: radio
           name: show
           id: show_blog
@@ -822,30 +738,6 @@ spec:
     - group: contact
       label: 联系我们
       formSchema:
-        - $formkit: repeater
-          name: carousel
-          label: 轮播块
-          value:
-            - title: MeterSphere
-              desc: MeterSphere 是一站式的开源持续测试平台，遵循 GPL v3 开源许可协议，涵盖测试跟踪、接口测试、UI 测试和性能测试等功能，全面兼容 JMeter、Selenium 等主流开源标准，有效助力开发和测试团队充分利用云弹性进行高度可扩展的自动化测试，加速高质量的软件交付。
-              url: https://metersphere.io
-          children:
-            - $formkit: text
-              name: title
-              label: 标题
-              value:
-            - $formkit: text
-              name: desc
-              label: 描述
-              value:
-            - $formkit: url
-              name: url
-              label: 跳转地址
-              value:
-        - $formkit: attachment
-          name: carousel_bg_img
-          label: 轮播块背景图片
-          value: /themes/moderna-template/assets/img/hero-bg.jpg
         - $formkit: radio
           name: show
           id: show_contact
@@ -905,30 +797,6 @@ spec:
     - group: common_style
       label: 全局样式
       formSchema:
-        - $formkit: repeater
-          name: carousel
-          label: 轮播块
-          value:
-            - title: MeterSphere
-              desc: MeterSphere 是一站式的开源持续测试平台，遵循 GPL v3 开源许可协议，涵盖测试跟踪、接口测试、UI 测试和性能测试等功能，全面兼容 JMeter、Selenium 等主流开源标准，有效助力开发和测试团队充分利用云弹性进行高度可扩展的自动化测试，加速高质量的软件交付。
-              url: https://metersphere.io
-          children:
-            - $formkit: text
-              name: title
-              label: 标题
-              value:
-            - $formkit: text
-              name: desc
-              label: 描述
-              value:
-            - $formkit: url
-              name: url
-              label: 跳转地址
-              value:
-        - $formkit: attachment
-          name: carousel_bg_img
-          label: 轮播块背景图片
-          value: /themes/moderna-template/assets/img/hero-bg.jpg
         - $formkit: code
           name: import_code
           help: 插入Header里面的css或者js
