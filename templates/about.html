@@ -1,110 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-<th:block th:replace="~{modules/import}" />
+<th:block th:replace="~{modules/import}"/>
 
 <body>
 
-  <th:block th:replace="~{modules/header::goPage(${singlePage.spec.slug})}" />
+<th:block th:replace="~{modules/header::goPage(${singlePage.spec.slug})}"/>
+<!-- ======= Hero Section ======= -->
+<div id="other_hero">
+    <section id="hero" class="d-flex justify-cntent-center align-items-center">
+        <div id="heroCarousel" class="container carousel carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
 
-  <main id="main">
+            <!-- Slide 1 -->
+            <div th:each="cs,csStat:${theme.config.home.carousel}"
+                 th:class="${csStat.index} == 0 ? 'carousel-item active' : 'carousel-item'">
+                <div class="carousel-container">
+                    <h2 class="animate__animated animate__fadeInDown" th:text="${cs.title}"></h2>
+                    <p class="animate__animated animate__fadeInUp" th:text="${cs.desc}"></p>
+                    <a th:href="${cs.url}" class="btn-get-started animate__animated animate__fadeInUp">查看更多</a>
+                </div>
+            </div>
+
+            <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
+            </a>
+
+            <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"></span>
+            </a>
+
+        </div>
+        <div id="hero-bg"
+             th:style="'background: url('+${theme.config.home.carousel_bg_img}+') center top no-repeat;'"/>
+    </section>
+</div>
+<!-- End Hero -->
+
+<main id="main">
 
 
     <!-- ======= About Section ======= -->
     <section class="about" data-aos="fade-up">
-      <div class="container">
+        <div class="container">
 
-        <div class="row">
-          <div class="col-lg-6">
-            <img th:src="@{${theme.config.about.header_img}}" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-6 pt-4 pt-lg-0">
-            <h3 th:text="${theme.config.about.header_title}"></h3>
-            <p class="fst-italic" th:text="${theme.config.about.header_desc}">
-            </p>
-            <ul>
-              <li th:each="it : ${theme.config.about.header_desc_items}"><i class="bi bi-check2-circle"></i> <span
-                  th:text="${it.desc}"></span> </li>
-            </ul>
-            <p th:text="${theme.config.about.header_summary}">
-            </p>
-          </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <img th:src="@{${theme.config.about.header_img}}" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0">
+                    <h3 th:text="${theme.config.about.header_title}"></h3>
+                    <p class="fst-italic" th:text="${theme.config.about.header_desc}">
+                    </p>
+                    <ul>
+                        <li th:each="it : ${theme.config.about.header_desc_items}"><i class="bi bi-check2-circle"></i>
+                            <span
+                                    th:text="${it.desc}"></span></li>
+                    </ul>
+                    <p th:text="${theme.config.about.header_summary}">
+                    </p>
+                </div>
+            </div>
+
         </div>
-
-      </div>
     </section><!-- End About Section -->
 
     <!-- ======= Facts Section ======= -->
     <section class="facts section-bg" data-aos="fade-up">
-      <div class="container" th:with="itSize=${#arrays.length(theme.config.about.header_num_items)}">
-        <div class="row counters">
+        <div class="container" th:with="itSize=${#arrays.length(theme.config.about.header_num_items)}">
+            <div class="row counters">
 
-          <div th:each="it : ${theme.config.about.header_num_items}"
-            th:class="'col-lg-'+ ${12/itSize} + ' col-6 text-center'">
+                <div th:each="it : ${theme.config.about.header_num_items}"
+                     th:class="'col-lg-'+ ${12/itSize} + ' col-6 text-center'">
             <span data-purecounter-start="0" th:data-purecounter-end="${it.num}" data-purecounter-duration="1"
-              class="purecounter"></span>
-            <p th:text="${it.name}">产品</p>
-          </div>
-        </div>
+                  class="purecounter"></span>
+                    <p th:text="${it.name}">产品</p>
+                </div>
+            </div>
 
-      </div>
+        </div>
     </section><!-- End Facts Section -->
 
     <!-- ======= Our Skills Section ======= -->
     <section class="skills" data-aos="fade-up">
-      <div class="container">
+        <div class="container">
 
-        <div class="section-title">
-          <h2 th:text="${theme.config.about.bar_chart_title}"></h2>
-          <p th:text="${theme.config.about.bar_chart_desc}"></p>
-        </div>
-
-        <div class="skills-content">
-
-          <div class="progress" th:each="it : ${theme.config.about.bar_chart_items}">
-            <div class="progress-bar" th:style="'background-color:'+${it.color}" role="progressbar"
-              th:aria-valuenow="${it.percent}" aria-valuemin="0" aria-valuemax="100">
-              <span class="skill"><span th:text="${it.name}"></span> <i class="val"
-                  th:text="${it.percent}+'%'"></i></span>
+            <div class="section-title">
+                <h2 th:text="${theme.config.about.bar_chart_title}"></h2>
+                <p th:text="${theme.config.about.bar_chart_desc}"></p>
             </div>
-          </div>
-        </div>
 
-      </div>
+            <div class="skills-content">
+
+                <div class="progress" th:each="it : ${theme.config.about.bar_chart_items}">
+                    <div class="progress-bar" th:style="'background-color:'+${it.color}" role="progressbar"
+                         th:aria-valuenow="${it.percent}" aria-valuemin="0" aria-valuemax="100">
+              <span class="skill"><span th:text="${it.name}"></span> <i class="val"
+                                                                        th:text="${it.percent}+'%'"></i></span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </section><!-- End Our Skills Section -->
 
     <!-- ======= Tetstimonials Section ======= -->
     <section class="testimonials" data-aos="fade-up">
-      <div class="container">
+        <div class="container">
 
-        <div class="section-title">
-          <h2 th:text="${theme.config.about.carousel_title}"></h2>
-          <p th:text="${theme.config.about.carousel_desc}"></p>
-        </div>
-
-        <div class="testimonials-carousel swiper">
-          <div class="swiper-wrapper">
-            <div th:each="it : ${theme.config.about.carousel_items}" class="testimonial-item swiper-slide">
-              <img th:src="@{${it.avatar}}" class="testimonial-img" alt="">
-              <h3 th:text="${it.name}"></h3>
-              <h4 th:text="${it.location}"></h4>
-              <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                <span th:text="${it.content}"></span>
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-              </p>
+            <div class="section-title">
+                <h2 th:text="${theme.config.about.carousel_title}"></h2>
+                <p th:text="${theme.config.about.carousel_desc}"></p>
             </div>
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
 
-      </div>
+            <div class="testimonials-carousel swiper">
+                <div class="swiper-wrapper">
+                    <div th:each="it : ${theme.config.about.carousel_items}" class="testimonial-item swiper-slide">
+                        <img th:src="@{${it.avatar}}" class="testimonial-img" alt="">
+                        <h3 th:text="${it.name}"></h3>
+                        <h4 th:text="${it.location}"></h4>
+                        <p>
+                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                            <span th:text="${it.content}"></span>
+                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                        </p>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+        </div>
     </section><!-- End Ttstimonials Section -->
 
-  </main><!-- End #main -->
+</main><!-- End #main -->
 
-  <!-- ======= Footer ======= -->
-  <th:block th:replace="~{modules/footer}" />
-  <!-- End Footer -->
+<!-- ======= Footer ======= -->
+<th:block th:replace="~{modules/footer}"/>
+<!-- End Footer -->
 
 </body>
 

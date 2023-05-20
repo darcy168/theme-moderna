@@ -11,23 +11,6 @@
 
   <main id="main" th:with="blog = ${singlePageFinder.getByName(theme.config.blog.page)}">
 
-    <!-- ======= Blog Section ======= -->
-    <section class="breadcrumbs">
-      <div class="container">
-
-        <div class="d-flex justify-content-between align-items-center">
-          <h2 th:text="${blog.spec.title}"></h2>
-
-          <ol>
-            <li><a href="/">首页</a></li>
-            <li><a th:href="@{'/' + ${blog.spec.slug}}" th:text="${blog.spec.title}"></a></li>
-            <li th:text="${post.spec.title}"></li>
-          </ol>
-        </div>
-
-      </div>
-    </section><!-- End Blog Section -->
-
     <!-- ======= Blog Single Section ======= -->
     <section id="blog" class="blog">
       <div class="container" data-aos="fade-up">
