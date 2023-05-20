@@ -493,7 +493,7 @@ h6,
     top: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(to right, rgba(251, 74, 62, 0.8), rgba(251, 74, 62, 0.6)), url("../img/hero-bg.jpg") center top no-repeat;
+    background: url("../img/hero-bg.jpg") center top no-repeat;
 }
 
 #hero-no-slider h2 {
