@@ -2,7 +2,7 @@
   th:class="${page =='home'} ? 'fixed-top d-flex align-items-center header-transparent' : 'fixed-top d-flex align-items-center' ">
   <div class="container d-flex justify-content-between align-items-center">
     <div class="logo">
-      <h1 class="text-light"><a href="/"><span th:text="${site.title}"></span></a></h1>
+      <h1 class="text-light"><a href="/"><img th:alt="${site.title}" th:src="@{${site.logo}}"><span th:text="${site.title}"></span></a></h1>
     </div>
     <nav id="navbar" class="navbar" th:if="${theme.config.common_style.show_menu}">
       <ul>

@@ -89,10 +89,10 @@
         </div>
 
         <div class="row" data-aos="fade-up" th:each="ft,ftState:${theme.config.home.features_items}">
-          <div th:class="${ftState.index} % 2 == 0 ? 'col-md-5 order-1 order-md-2' : 'col-md-5'">
+          <div th:class="${ftState.index} % 2 == 0 ? 'col-md-6 order-1 order-md-2' : 'col-md-6'">
             <img th:src="${ft.img}" class="img-fluid" alt="">
           </div>
-          <div th:class="${ftState.index} % 2 == 0 ? 'col-md-7 pt-5 order-2 order-md-1' : 'col-md-7 pt-4'">
+          <div th:class="${ftState.index} % 2 == 0 ? 'col-md-6 pt-5 order-2 order-md-1' : 'col-md-6 pt-4'">
             <h3 th:text="${ft.title}"></h3>
             <p class="fst-italic" th:text="${ft.desc}">
             </p>

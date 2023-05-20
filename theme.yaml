@@ -1,18 +1,18 @@
 apiVersion: theme.halo.run/v1alpha1
 kind: Theme
 metadata:
-  name: moderna-template
+  name: doublespring-template
 spec:
-  displayName: Moderna template
+  displayName: 沉浸式商务官网主题
   author:
-    name: shrChang.Liu
-    website: "https://halo.run"
-  description: Moderna html5 template for Halo
+    name: 张秀春
+    website: "https://www.doublespring.top"
+  description: 沉浸式商务官网主题
   logo: "/themes/moderna-template/assets/img/favicon.png"
-  website: "https://halo.run"
-  repo: "https://github.com/halo-sigs/theme-starter"
-  settingName: "theme-moderna-setting"
-  configMapName: "theme-moderna-configMap"
+  website: "https://www.doublespring.top"
+  repo: "https://www.doublespring.top"
+  settingName: "theme-doublespring-setting"
+  configMapName: "theme-doublespring-configMap"
   version: "1.0"
   require: "*"
   customTemplates:
