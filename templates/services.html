@@ -14,7 +14,7 @@
       <div id="heroCarousel" class="container carousel carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
 
         <!-- Slide 1 -->
-        <div th:each="cs,csStat:${theme.config.home.carousel}"
+        <div th:each="cs,csStat:${theme.config.service.carousel}"
              th:class="${csStat.index} == 0 ? 'carousel-item active' : 'carousel-item'">
           <div class="carousel-container">
             <h2 class="animate__animated animate__fadeInDown" th:text="${cs.title}"></h2>
@@ -33,7 +33,7 @@
 
       </div>
       <div id="hero-bg"
-           th:style="'background: url('+${theme.config.home.carousel_bg_img}+') center top no-repeat;'"/>
+           th:style="'background: url('+${theme.config.service.carousel_bg_img}+') center top no-repeat;'"/>
     </section>
   </div>
   <!-- End Hero -->
