@@ -338,7 +338,7 @@ h6,
 --------------------------------------------------------------*/
 #hero {
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     overflow: hidden;
     position: relative;
 }
@@ -346,28 +346,14 @@ h6,
 #hero-bg {
     content: "";
     position: absolute;
-    left: 50%;
+    left: 0%;
     top: 0;
-    width: 130%;
-    height: 95%;
+    width: 100%;
+    height: 100%;
     z-index: 0;
-    border-radius: 0 0 50% 50%;
-    transform: translateX(-50%) rotate(0deg);
 }
 
-#hero::before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 0;
-    width: 130%;
-    height: 96%;
-    background: rgb(251, 85, 75);
-    opacity: 0.3;
-    z-index: 0;
-    border-radius: 0 0 50% 50%;
-    transform: translateX(-50%) translateY(18px) rotate(2deg);
-}
+
 
 #hero .carousel-container {
     display: flex;
@@ -424,7 +410,7 @@ h6,
     color: #fff;
     -webkit-animation-delay: 0.8s;
     animation-delay: 0.8s;
-    border: 2px solid rgb(251, 85, 75, 0.8);
+    background: rgb(251, 85, 75, 0.2);
 }
 
 #hero .btn-get-started:hover {
