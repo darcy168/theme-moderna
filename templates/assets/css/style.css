@@ -2381,6 +2381,7 @@ section {
 /* 产品 card 区域*/
 .product_services {
     background: url(/upload/section-background.webp);
+    padding: 30px 0px 20px 0px !important;
 }
 
 .product_services_nav {
@@ -2408,8 +2409,9 @@ section {
 }
 
 .product_services_nav .nav-item .active {
-    background: url("/upload/tab-beiing.svg");
+    background: url(/upload/tab-beiing.svg) center no-repeat;
     color: #ffffff;
+    background-size: 100%;
 }
 
 .product_services_nav .nav-item .active {
@@ -2423,7 +2425,7 @@ section {
     display: inline-block;
     height: 116px;
     line-height: 116px;
-    padding: 0px!important;
+    padding: 0px !important;
 
 }
 
@@ -2433,5 +2435,133 @@ section {
 }
 
 .tab-content {
+}
+
+
+.tab-pane {
+    display: flex;
+    flex-wrap: wrap;
+    display: -webkit-flex;
+}
+
+
+.tab-pane-content {
     background: #ffffff;
+    border-radius: 4px;
+    padding: 10px;
+    height: 100%;
+    padding-bottom: 40px;
+}
+
+.tab-content > .active {
+    display: flex !important;
+    flex-wrap: wrap;
+}
+
+
+.tab-pane > div {
+    margin-left: 20px;
+}
+
+.tab-pane div:first-child {
+    margin-left: 0px !important;
+}
+
+
+.tab-pane-content-title {
+    font-size: 20px;
+    font-weight: 500;
+    color: #353c58;
+    line-height: 32px;
+    padding: 12px 16px;
+    text-align: left;
+}
+
+.tab-pane-content .content div {
+    display: inline-block;
+    float: left;
+}
+
+.content-txt-title {
+    font-size: 20px;
+    font-weight: 500;
+    color: #3d446e;
+    line-height: 28px;
+}
+
+.content-txt-remark {
+    font-size: 16px;
+    font-weight: 400;
+    color: #8b8fa8;
+    line-height: 20px;
+    margin: 8px 0;
+}
+
+.content-txt-link {
+    font-size: 16px;
+    color: #1d78ff;
+    line-height: 20px;
+}
+
+.tab-pane-content .content .img img {
+    max-width: 100%;
+    margin-top: 4px;
+}
+
+.tab-pane-content .content-text {
+    float: right;
+}
+
+.content-txt-title, .content-txt-remark, .content-txt-link {
+    margin: 0px !important;
+    width: 90%;
+    text-align: left;
+    display: block;
+    padding-left: 26px;
+    margin-bottom: 14px !important;
+}
+
+.tab-pane-content .content:hover {
+    background-color: #f2f7fa;
+    border-radius: 8px;
+    box-shadow: 0 6px 10px 0 rgb(29 120 255 / 10%);
+    cursor: pointer;
+}
+
+.tab-pane-content .content {
+    width: 100%;
+    height: 146px;
+    padding: 18px 10px 15px 26px;
+    margin-bottom: 30px;
+}
+
+.tab-pane-container {
+    background: #ffffff;
+    flex: 1 !important;
+    text-align: center;
+    display: inline-block;
+    border-radius: 6px;
+    min-width: 300px;
+}
+
+.product_services-title {
+    font-size: 42px;
+    font-weight: 600;
+    color: #353c58;
+    line-height: 59px;
+    text-align: center;
+}
+
+.product_services-detail {
+    font-size: 18px;
+    padding: 16px 0;
+    font-weight: 400;
+    color: #3d4461;
+    line-height: 25px;
+    text-align: center;
+    padding-bottom: 26px;
+}
+
+#features {
+    padding-top: 30px;
 }
