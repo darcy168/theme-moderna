@@ -2376,3 +2376,62 @@ section {
         height: 280px;
     }
 }
+
+
+/* 产品 card 区域*/
+.product_services {
+    background: url(/upload/section-background.webp);
+}
+
+.product_services_nav {
+    display: flex;
+    flex-wrap: wrap;
+    display: -webkit-flex;
+    --bs-nav-tabs-border-width: 0px !important;
+    margin-top: 0px !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    margin-bottom: 22px;
+    background: #ffffff;
+}
+
+.product_services_nav .nav-item {
+    flex: 1 !important;
+    padding-bottom: 0px !important;
+    padding: 0px !important;
+    text-align: center;
+    color: #3d446e;
+}
+
+.product_services_nav .nav-item:hover {
+    cursor: pointer;
+}
+
+.product_services_nav .nav-item .active {
+    background: url("/upload/tab-beiing.svg");
+    color: #ffffff;
+}
+
+.product_services_nav .nav-item .active {
+    border-radius: 0px;
+}
+
+.product_services_nav .nav-item a {
+    color: #3d446e;
+    font-size: 16px;
+    width: 100%;
+    display: inline-block;
+    height: 116px;
+    line-height: 116px;
+    padding: 0px!important;
+
+}
+
+.product_services_nav .nav-item a h4 {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.tab-content {
+    background: #ffffff;
+}
