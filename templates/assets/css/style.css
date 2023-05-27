@@ -2383,12 +2383,12 @@ section {
 
 
 /* 产品 card 区域*/
-.product_services {
+.index_services {
     background: url(/upload/section-background.webp);
     padding: 30px 0px 20px 0px !important;
 }
 
-.product_services_nav, .product_cases_nav {
+.index_services_nav, .index_cases_nav {
     display: flex;
     flex-wrap: wrap;
     display: -webkit-flex;
@@ -2400,7 +2400,7 @@ section {
     background: #ffffff;
 }
 
-.product_services_nav .nav-item, .product_cases_nav .nav-item {
+.index_services_nav .nav-item, .index_cases_nav .nav-item {
     flex: 1 !important;
     padding-bottom: 0px !important;
     padding: 0px !important;
@@ -2408,21 +2408,21 @@ section {
     color: #3d446e;
 }
 
-.product_services_nav .nav-item:hover, .product_cases_nav .nav-item:hover, .content-inner_nav .nav-item:hover {
+.index_services_nav .nav-item:hover, .index_cases_nav .nav-item:hover, .content-inner_nav .nav-item:hover {
     cursor: pointer;
 }
 
-.product_services_nav .nav-item .active, .product_cases_nav .nav-item .active {
+.index_services_nav .nav-item .active, .index_cases_nav .nav-item .active {
     background: url(/upload/tab-beiing.svg) center no-repeat;
     color: #ffffff;
     background-size: 100%;
 }
 
-.product_services_nav .nav-item .active, .product_cases_nav .nav-item .active {
+.index_services_nav .nav-item .active, .index_cases_nav .nav-item .active {
     border-radius: 0px;
 }
 
-.product_services_nav .nav-item a, .product_cases_nav .nav-item a {
+.index_services_nav .nav-item a, .index_cases_nav .nav-item a {
     color: #3d446e;
     font-size: 16px;
     width: 100%;
@@ -2433,7 +2433,7 @@ section {
 
 }
 
-.product_cases_nav .nav-item a {
+.index_cases_nav .nav-item a {
     color: #3d446e;
     font-size: 16px;
     width: 100%;
@@ -2444,7 +2444,7 @@ section {
 
 }
 
-.product_services_nav .nav-item a h4, .product_cases_nav .nav-item a h4 {
+.index_services_nav .nav-item a h4, .index_cases_nav .nav-item a h4 {
     vertical-align: middle;
     display: inline-block;
     margin-bottom: 0px !important;
@@ -2560,7 +2560,7 @@ section {
     min-width: 300px;
 }
 
-.product_services-title, .product_cases-title {
+.index_services-title, .index_cases-title {
     font-size: 42px;
     font-weight: 600;
     color: #353c58;
@@ -2568,7 +2568,7 @@ section {
     text-align: center;
 }
 
-.product_services-detail, .product_cases-detail {
+.index_services-detail, .index_cases-detail {
     font-size: 18px;
     padding: 16px 0;
     font-weight: 400;
@@ -2671,7 +2671,7 @@ section {
     min-width: 300px;
 }
 
-.product_services-title {
+.index_services-title {
     font-size: 42px;
     font-weight: 600;
     color: #353c58;
@@ -2679,7 +2679,7 @@ section {
     text-align: center;
 }
 
-.product_services-detail {
+.index_services-detail {
     font-size: 18px;
     padding: 16px 0;
     font-weight: 400;
@@ -2745,7 +2745,7 @@ section {
     color: #40a9ff;
 }
 
-.tab-content-product_cases .tab-pane .tab-pane-container .tab-pane-content {
+.tab-content-index_cases .tab-pane .tab-pane-container .tab-pane-content {
     padding: 0px !important;
 }
 
@@ -2753,7 +2753,7 @@ section {
     padding-top: 26px !important
 }
 
-.tab-content-product_cases .tab-pane .tab-pane-container {
+.tab-content-index_cases .tab-pane .tab-pane-container {
     background: rgb(252 252 252 / 70%);
 }
 
