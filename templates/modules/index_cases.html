@@ -30,8 +30,8 @@
 
                                     <ul class="content-inner_nav nav nav-tabs col-lg-2 col-md-4 col-sm-6">
                                         <li class="nav-item" th:each="cs2,cs2Stat:${cs.children_service_title}">
-                                            <a th:class="${cs2Stat.index} == 0 ? 'nav-link active show' : 'nav-link'" data-bs-toggle="tab" th:data-bs-target="@{'#pcitab-'+${cs2Stat.index}}">
-                                                <h4 th:text="${cs2.title}"></h4>
+                                            <a th:class="${cs2Stat.index} == 0 ? 'nav-link active show' : 'nav-link'" data-bs-toggle="tab" th:data-bs-target="@{'#pcitab-'+${cs2.classname}}">
+                                                <h4 th:text="${cs2.classname}"></h4>
                                             </a>
                                         </li>
                                     </ul>
@@ -39,12 +39,12 @@
                                     <div class="content-inner_content col-lg-10 col-md-8 col-sm-6">
                                         <div class="tab-content">
 
-                                            <div th:class="${cs2Stat.index} == 0 ? 'tab-pane active show' : 'tab-pane'" th:each="cs2,cs2Stat:${cs.children_service_title}" th:id="@{'pcitab-'+${cs2Stat.index}}">
+                                            <div th:class="${cs2Stat.index} == 0 ? 'tab-pane active show' : 'tab-pane'" th:each="cs2,cs2Stat:${cs.children_service_title}" th:id="@{'pcitab-'+${cs2.classname}}">
 
                                                 <div class="tab-pane-container">
                                                     <div class="tab-pane-content"
                                                          data-aos="fade-up" data-aos-delay="100"
-                                                         th:style="'background: url('+${cs2.background}+');background-size:100% 100%;'">
+                                                         th:style="'background: url('+${cs2.background}+');background-size:100% 100%; padding: 20px 30px!important;'">
 
                                                         <div class="content col-12">
                                                             <p class="content-case-title col-12" th:text="${cs2.title}"></p>
@@ -53,7 +53,7 @@
                                                                 <p class="content-case-attr-content col-3" th:each="cs3,cs3Stat:${cs2.attributes}" th:text="${cs3.title}"></p>
                                                             </div>
                                                             <div class="content-case-button col-12">
-                                                                <a class="content-case-button-a" th:href="${cs2.url}">方案详情>></a>
+                                                                <a class="content-case-button-a" th:href="${cs2.url}" target="_blank">方案详情>></a>
                                                             </div>
                                                             <div class="content-case-image col-12">
                                                                 <img class="content-case-button-image" th:each="cs4,cs4Stat:${cs2.customers}" th:src="${cs4.url}"/>

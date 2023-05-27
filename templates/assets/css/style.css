@@ -2695,9 +2695,9 @@ section {
 }
 
 .content-inner_nav .nav-item a h4 {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
-    line-height: 32px;
+    line-height: 36px;
     align-items: center;
     color: #3d446e;
     text-indent: 6px;
@@ -2756,15 +2756,17 @@ section {
 
 
 .content-case-attr-content {
-    height: 48px;
+    height: 58px;
     background: #fff;
-    border-radius: 4px;
+    border-radius: 6px;
     color: #64698b;
-    line-height: 48px;
+    line-height: 58px;
     display: inline-block;
     float: left;
     margin-right: 30px;
     min-width: 200px;
+    padding-left: 20px;
+    margin-bottom: 25px;
 }
 
 .content-case-attr-content:before {
@@ -2781,7 +2783,7 @@ section {
     display: inline-block;
     line-height: 40px;
     float: left;
-    margin-top: 30px;
+    margin-top: 50px;
     text-align: center;
 
 }
@@ -2898,6 +2900,14 @@ section {
 
 .index_certificates-one span {
     display: block;
+}
+
+.tab-content-index_cases-container .tab-pane-container {
+    width: 100%;
+}
+
+.tab-content-index_cases-container .content-case-remark {
+    padding: 0px 0px 20px 0px;
 }
 
 

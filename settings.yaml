@@ -288,19 +288,19 @@ spec:
               value: true
         - $formkit: text
           name: title
-          label: 分类标题
+          label: 解决方案分类标题
           value:
         - $formkit: text
           name: remark
-          label: 分类描述
+          label: 解决方案分类描述
           value:
         - $formkit: text
           name: background
-          label: 背景图
+          label: 解决方案背景图
           value:
         - $formkit: repeater
           name: service
-          label: 服务分类
+          label: 解决方案分类
           value:
           children:
             - $formkit: text
@@ -309,52 +309,47 @@ spec:
               value:
             - $formkit: repeater
               name: children_service_title
-              label: 子分类
+              label: 二级分类
               value:
               children:
                 - $formkit: text
+                  name: classname
+                  label: 二级分类名称
+                  value:
+                - $formkit: text
                   name: title
-                  label: 子分类标题
+                  label: 解决方案名称
+                  value:
+                - $formkit: text
+                  name: remark
+                  label: 解决方案描述
+                  value:
+                - $formkit: text
+                  name: background
+                  label: 解决方案背景图
+                  value:
+                - $formkit: text
+                  name: url
+                  label: 解决方案跳转链接
                   value:
                 - $formkit: repeater
-                  name: grandchildren_service_title
-                  label: 节点
+                  name: attributes
+                  label: 解决方案特性
                   value:
                   children:
                     - $formkit: text
                       name: title
-                      label: 名称
+                      label: 特性
                       value:
-                    - $formkit: text
-                      name: remark
-                      label: 描述
-                      value:
-                    - $formkit: text
-                      name: background
-                      label: 背景图
-                      value:
+                - $formkit: repeater
+                  name: customers
+                  label: 客户案例logo
+                  value:
+                  children:
                     - $formkit: text
                       name: url
-                      label: 跳转链接
-                      value:
-                    - $formkit: repeater
-                      name: attributes
-                      label: 解决方案特性
-                      value:
-                      children:
-                        - $formkit: text
-                          name: title
-                          label: 特性
-                          value:
-                    - $formkit: repeater
-                      name: customers
                       label: 客户案例logo
                       value:
-                      children:
-                        - $formkit: text
-                          name: url
-                          label: 客户案例logo
-                          value:
 
     - group: home_fact
       label: 首页-统计信息
