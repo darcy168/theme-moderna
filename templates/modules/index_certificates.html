@@ -1,50 +1,18 @@
-<section class="index_certificates" style="background: url('/upload/background-2.webp') center no-repeat;background-size: 100% 100%;">
+<section class="index_certificates" th:if="${theme.config.home_certificate.show_home_certificate}" th:style="'background: url('+${theme.config.home_certificate.background}+');background-size:100% 100%;'">
 
     <div class="container">
         <!-- ======= Features Section ======= -->
         <section id="features" class="features">
             <div class="container" data-aos="fade-up">
 
-                <p class="index_certificates-title">
-                    荣誉资质
+                <p class="index_certificates-title" th:text="${theme.config.home_certificate.title}">
                 </p>
 
                 <div class="tab-content tab-content-index_certificates" data-aos="fade-up">
-                    <P class="index_certificates-one">
-                        <img src="/upload/rongyuzizhi/cmmi5.webp">
-                        <span>CMMI5</span>
-                    </P>
-                    <P class="index_certificates-one">
-                        <img src="/upload/rongyuzizhi/xintongyuan.webp">
-                        <span>CMMI5</span>
-                    </P>
-                    <P class="index_certificates-one">
-                        <img src="/upload/rongyuzizhi/fenbushiliuchuli.webp">
-                        <span>CMMI5</span>
-                    </P>
-                    <P class="index_certificates-one">
-                        <img src="/upload/rongyuzizhi/fenbushipichuli.webp">
-                        <span>CMMI5</span>
-                    </P>
-                    <P class="index_certificates-one">
-                        <img src="/upload/rongyuzizhi/fenbushiweifuwubaozhang.webp">
-                        <span>CMMI5</span>
-                    </P>
-                    <P class="index_certificates-one">
-                        <img src="/upload/rongyuzizhi/shujufuwuzhili.webp">
-                        <span>CMMI5</span>
-                    </P>
-                    <P class="index_certificates-one">
-                        <img src="/upload/rongyuzizhi/qiye-aaa.webp">
-                        <span>CMMI5</span>
-                    </P>
-                    <P class="index_certificates-one">
-                        <img src="/upload/rongyuzizhi/zhishichanquanguanlitixi.webp">
-                        <span>CMMI5</span>
-                    </P>
-                    <P class="index_certificates-one">
-                        <img src="/upload/rongyuzizhi/zhishichanquanguanlitixi.webp">
-                        <span>CMMI5</span>
+
+                    <P class="index_certificates-one" th:each="cs : ${theme.config.home_certificate.home_certificate_items}">
+                        <img th:src="${cs.image}"/>
+                        <span th:text="${cs.title}"></span>
                     </P>
 
 
