@@ -27,36 +27,27 @@
                             <h4 th:text="${cs.title}"></h4>
                         </a>
                     </li>
-                    <!--?                    <li class="nav-item">-->
-                    <!--?                        <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#tab-1">-->
-                    <!--?                            <h4>Modisit</h4>-->
-                    <!--?                        </a>-->
-                    <!--?                    </li>-->
-                    <!--?                    <li class="nav-item">-->
-                    <!--?                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">-->
-                    <!--?                            <h4>Praesenti</h4>-->
-                    <!--?                        </a>-->
-                    <!--?                    </li>-->
-                    <!--?                    <li class="nav-item">-->
-                    <!--?                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">-->
-                    <!--?                            <h4>Explica</h4>-->
-                    <!--?                        </a>-->
-                    <!--?                    </li>-->
+
 
                 </ul>
 
                 <div class="tab-content">
 
-                    <div class="tab-pane active show" id="tab-0">
+                    <div th:class="${csStat.index} == 0 ? 'tab-pane active show' : 'tab-pane'" th:each="cs,csStat:${theme.config.home_service.service}" th:id="@{'#tab-'+${csStat.index}}">
+
                         <div class="tab-pane-container">
                             <div class="tab-pane-content"
                                  data-aos="fade-up" data-aos-delay="100"
-                                 style="background: url('/upload/beijing-1.png');background-size:100% 100%;">
-                                <p class="tab-pane-content-title">tab-1-1</p>
+                                 th:style="'background: url('+${cs.background}+');background-size:100% 100%;'">
+
+                                <p class="tab-pane-content-title" th:text="${cs.background}"></p>
+
                                 <div class="content tab-pane-content-service">
+
                                     <div class="img col-3">
                                         <img src="/upload/shouye-background.jpg">
                                     </div>
+
                                     <div class="content-txt col-9">
                                         <p class="content-txt-title">大数据计算引擎</p>
                                         <p class="content-txt-remark">企业级数据计算与存储平台</p>
@@ -64,47 +55,7 @@
                                     </div>
 
                                 </div>
-                                <div class="content tab-pane-content-service">
-                                    <div class="img col-3">
-                                        <img src="/upload/shouye-background.jpg">
-                                    </div>
-                                    <div class="content-txt col-9">
-                                        <p class="content-txt-title">大数据计算引擎</p>
-                                        <p class="content-txt-remark">企业级数据计算与存储平台</p>
-                                        <a class="content-txt-link" href="#">了解详情>></a>
-                                    </div>
 
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="tab-pane-container">
-                            <div class="tab-pane-content"
-                                 data-aos="fade-up" data-aos-delay="100"
-                                 style="background: url('/upload/beijing-1.png');background-size:100% 100%;">
-                                <p class="tab-pane-content-title">tab-1-1</p>
-                                <div class="content tab-pane-content-service">
-                                    <div class="img col-3">
-                                        <img src="/upload/shouye-background.jpg">
-                                    </div>
-                                    <div class="content-txt col-9">
-                                        <p class="content-txt-title">大数据计算引擎</p>
-                                        <p class="content-txt-remark">企业级数据计算与存储平台</p>
-                                        <a class="content-txt-link" href="#">了解详情>></a>
-                                    </div>
-
-                                </div>
-                                <div class="content tab-pane-content-service">
-                                    <div class="img col-3">
-                                        <img src="/upload/shouye-background.jpg">
-                                    </div>
-                                    <div class="content-txt col-9">
-                                        <p class="content-txt-title">大数据计算引擎</p>
-                                        <p class="content-txt-remark">企业级数据计算与存储平台</p>
-                                        <a class="content-txt-link" href="#">了解详情>></a>
-                                    </div>
-
-                                </div>
 
                             </div>
                         </div>
