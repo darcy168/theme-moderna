@@ -2559,7 +2559,7 @@ section {
     min-width: 300px;
 }
 
-.index_services-title, .index_cases-title {
+.index_services-title, .index_cases-title, .index_certificates-title {
     font-size: 42px;
     font-weight: 600;
     color: #353c58;
@@ -2878,7 +2878,43 @@ section {
     }
 }
 
+.index_certificates {
+    padding-top: 0px !important;
+}
 
+.index_certificates-title {
+    border-bottom: 2px double #f6f6f6;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+.tab-content-index_certificates {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.index_certificates-one {
+    display: inline-block;
+    max-width: 225px;
+    height: 200px;
+    margin: 0px 20px 20px 20px !important;
+    padding: 0px 20px;
+    text-align: center;
+    background: #fff;
+    border-radius: 6px;
+    flex: 1;
+
+}
+
+.index_certificates-one img {
+    max-width: 200px;
+    display: block;
+}
+
+.index_certificates-one span {
+    display: block;
+}
 
 
 
