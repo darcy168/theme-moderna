@@ -1,16 +1,13 @@
-<section class="index_services">
+<section class="index_services" th:if="${theme.config.home_service.show_home_service}">
 
     <div class="container">
-        <!-- ======= Features Section ======= -->
         <section id="features" class="features">
             <div class="container" data-aos="fade-up">
 
-                <p class="index_services-title">
-                    领先的数字化基础软件与应用服务商
+                <p class="index_services-title" th:text="${theme.config.home_service.title}">
                 </p>
 
-                <p class="index_services-detail">
-                    为企业提供稳定、高效、卓越的产品与服务
+                <p class="index_services-detail" th:text="${theme.config.home_service.remark}">
                 </p>
 
                 <ul class="index_services_nav nav nav-tabs row">
@@ -20,19 +17,16 @@
                             <h4>Modisit</h4>
                         </a>
                     </li>
-
                     <li class="nav-item">
                         <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
                             <h4>Praesenti</h4>
                         </a>
                     </li>
-
                     <li class="nav-item">
                         <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">
                             <h4>Explica</h4>
                         </a>
                     </li>
-
 
                 </ul>
 
@@ -72,19 +66,8 @@
                         <div class="tab-pane-container">
                             <div class="tab-pane-content"
                                  data-aos="fade-up" data-aos-delay="100"
-                                 style="background: url('/upload/beijing-2.png');background-size:100% 100%;">
+                                 style="background: url('/upload/beijing-1.png');background-size:100% 100%;">
                                 <p class="tab-pane-content-title">tab-1-1</p>
-                                <div class="content tab-pane-content-service">
-                                    <div class="img col-3">
-                                        <img src="/upload/shouye-background.jpg">
-                                    </div>
-                                    <div class="content-txt col-9">
-                                        <p class="content-txt-title">大数据计算引擎</p>
-                                        <p class="content-txt-remark">企业级数据计算与存储平台</p>
-                                        <a class="content-txt-link" href="#">了解详情>></a>
-                                    </div>
-
-                                </div>
                                 <div class="content tab-pane-content-service">
                                     <div class="img col-3">
                                         <img src="/upload/shouye-background.jpg">
@@ -110,300 +93,10 @@
 
                             </div>
                         </div>
-                        <div class="tab-pane-container">
-                            <div class="tab-pane-content"
-                                 data-aos="fade-up" data-aos-delay="100"
-                                 style="background: url('/upload/beijing-3.png');background-size:100% 100%;">
-                                <p class="tab-pane-content-title">tab-1-1</p>
-                                <div class="content tab-pane-content-service">
-                                    <div class="img col-3">
-                                        <img src="/upload/shouye-background.jpg">
-                                    </div>
-                                    <div class="content-txt col-9">
-                                        <p class="content-txt-title">大数据计算引擎</p>
-                                        <p class="content-txt-remark">企业级数据计算与存储平台</p>
-                                        <a class="content-txt-link" href="#">了解详情>></a>
-                                    </div>
-
-                                </div>
-                                <div class="content tab-pane-content-service">
-                                    <div class="img col-3">
-                                        <img src="/upload/shouye-background.jpg">
-                                    </div>
-                                    <div class="content-txt col-9">
-                                        <p class="content-txt-title">大数据计算引擎</p>
-                                        <p class="content-txt-remark">企业级数据计算与存储平台</p>
-                                        <a class="content-txt-link" href="#">了解详情>></a>
-                                    </div>
-
-                                </div>
-                                <div class="content tab-pane-content-service">
-                                    <div class="img col-3">
-                                        <img src="/upload/shouye-background.jpg">
-                                    </div>
-                                    <div class="content-txt col-9">
-                                        <p class="content-txt-title">大数据计算引擎</p>
-                                        <p class="content-txt-remark">企业级数据计算与存储平台</p>
-                                        <a class="content-txt-link" href="#">了解详情>></a>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
-
                     </div>
                     <div class="tab-pane" id="tab-2">
-                        <div class="tab-pane-container">
-                            <div class="tab-pane-content"
-                                 data-aos="fade-up" data-aos-delay="100"
-                                 style="background: url('/upload/beijing-1.png');background-size:100% 100%;">
-                                <p class="tab-pane-content-title">tab-2-1</p>
-                                <div class="content tab-pane-content-service">
-                                    <div class="img col-3">
-                                        <img src="/upload/shouye-background.jpg">
-                                    </div>
-                                    <div class="content-txt col-9">
-                                        <p class="content-txt-title">大数据计算引擎</p>
-                                        <p class="content-txt-remark">企业级数据计算与存储平台</p>
-                                        <a class="content-txt-link" href="#">了解详情>></a>
-                                    </div>
-
-                                </div>
-                                <div class="content tab-pane-content-service">
-                                    <div class="img col-3">
-                                        <img src="/upload/shouye-background.jpg">
-                                    </div>
-                                    <div class="content-txt col-9">
-                                        <p class="content-txt-title">大数据计算引擎</p>
-                                        <p class="content-txt-remark">企业级数据计算与存储平台</p>
-                                        <a class="content-txt-link" href="#">了解详情>></a>
-                                    </div>
-
-                                </div>
-                              <div class="content tab-pane-content-service">
-                                    <div class="img col-3">
-                                        <img src="/upload/shouye-background.jpg">
-                                    </div>
-                                    <div class="content-txt col-9">
-                                        <p class="content-txt-title">大数据计算引擎</p>
-                                        <p class="content-txt-remark">企业级数据计算与存储平台</p>
-                                        <a class="content-txt-link" href="#">了解详情>></a>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="tab-pane-container">
-                            <div class="tab-pane-content"
-                                 data-aos="fade-up" data-aos-delay="100"
-                                 style="background: url('/upload/beijing-2.png');background-size:100% 100%;">
-                                <p class="tab-pane-content-title">tab-1-1</p>
-                                <div class="content tab-pane-content-service">
-                                    <div class="img col-3">
-                                        <img src="/upload/shouye-background.jpg">
-                                    </div>
-                                    <div class="content-txt col-9">
-                                        <p class="content-txt-title">大数据计算引擎</p>
-                                        <p class="content-txt-remark">企业级数据计算与存储平台</p>
-                                        <a class="content-txt-link" href="#">了解详情>></a>
-                                    </div>
-
-                                </div>
-                                <div class="content tab-pane-content-service">
-                                    <div class="img col-3">
-                                        <img src="/upload/shouye-background.jpg">
-                                    </div>
-                                    <div class="content-txt col-9">
-                                        <p class="content-txt-title">大数据计算引擎</p>
-                                        <p class="content-txt-remark">企业级数据计算与存储平台</p>
-                                        <a class="content-txt-link" href="#">了解详情>></a>
-                                    </div>
-
-                                </div>
-                                <div class="content tab-pane-content-service">
-                                    <div class="img col-3">
-                                        <img src="/upload/shouye-background.jpg">
-                                    </div>
-                                    <div class="content-txt col-9">
-                                        <p class="content-txt-title">大数据计算引擎</p>
-                                        <p class="content-txt-remark">企业级数据计算与存储平台</p>
-                                        <a class="content-txt-link" href="#">了解详情>></a>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
-
                     </div>
                     <div class="tab-pane" id="tab-3">
-                        <div class="tab-pane-container">
-                            <div class="tab-pane-content"
-                                 data-aos="fade-up" data-aos-delay="100"
-                                 style="background: url('/upload/beijing-1.png');background-size:100% 100%;">
-                                <p class="tab-pane-content-title">tab-1-1</p>
-                                <div class="content tab-pane-content-service">
-                                    <div class="img col-3">
-                                        <img src="/upload/shouye-background.jpg">
-                                    </div>
-                                    <div class="content-txt col-9">
-                                        <p class="content-txt-title">大数据计算引擎</p>
-                                        <p class="content-txt-remark">企业级数据计算与存储平台</p>
-                                        <a class="content-txt-link" href="#">了解详情>></a>
-                                    </div>
-
-                                </div>
-                                <div class="content tab-pane-content-service">
-                                    <div class="img col-3">
-                                        <img src="/upload/shouye-background.jpg">
-                                    </div>
-                                    <div class="content-txt col-9">
-                                        <p class="content-txt-title">大数据计算引擎</p>
-                                        <p class="content-txt-remark">企业级数据计算与存储平台</p>
-                                        <a class="content-txt-link" href="#">了解详情>></a>
-                                    </div>
-
-                                </div>
-                                <div class="content tab-pane-content-service">
-                                    <div class="img col-3">
-                                        <img src="/upload/shouye-background.jpg">
-                                    </div>
-                                    <div class="content-txt col-9">
-                                        <p class="content-txt-title">大数据计算引擎</p>
-                                        <p class="content-txt-remark">企业级数据计算与存储平台</p>
-                                        <a class="content-txt-link" href="#">了解详情>></a>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="tab-pane-container">
-                            <div class="tab-pane-content"
-                                 data-aos="fade-up" data-aos-delay="100"
-                                 style="background: url('/upload/beijing-2.png');background-size:100% 100%;">
-                                <p class="tab-pane-content-title">tab-1-1</p>
-                                <div class="content tab-pane-content-service">
-                                    <div class="img col-3">
-                                        <img src="/upload/shouye-background.jpg">
-                                    </div>
-                                    <div class="content-txt col-9">
-                                        <p class="content-txt-title">大数据计算引擎</p>
-                                        <p class="content-txt-remark">企业级数据计算与存储平台</p>
-                                        <a class="content-txt-link" href="#">了解详情>></a>
-                                    </div>
-
-                                </div>
-                                <div class="content tab-pane-content-service">
-                                    <div class="img col-3">
-                                        <img src="/upload/shouye-background.jpg">
-                                    </div>
-                                    <div class="content-txt col-9">
-                                        <p class="content-txt-title">大数据计算引擎</p>
-                                        <p class="content-txt-remark">企业级数据计算与存储平台</p>
-                                        <a class="content-txt-link" href="#">了解详情>></a>
-                                    </div>
-
-                                </div>
-                                <div class="content tab-pane-content-service">
-                                    <div class="img col-3">
-                                        <img src="/upload/shouye-background.jpg">
-                                    </div>
-                                    <div class="content-txt col-9">
-                                        <p class="content-txt-title">大数据计算引擎</p>
-                                        <p class="content-txt-remark">企业级数据计算与存储平台</p>
-                                        <a class="content-txt-link" href="#">了解详情>></a>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="tab-pane-container">
-                            <div class="tab-pane-content"
-                                 data-aos="fade-up" data-aos-delay="100"
-                                 style="background: url('/upload/beijing-3.png');background-size:100% 100%;">
-                                <p class="tab-pane-content-title">tab-1-1</p>
-                                <div class="content tab-pane-content-service">
-                                    <div class="img col-3">
-                                        <img src="/upload/shouye-background.jpg">
-                                    </div>
-                                    <div class="content-txt col-9">
-                                        <p class="content-txt-title">大数据计算引擎</p>
-                                        <p class="content-txt-remark">企业级数据计算与存储平台</p>
-                                        <a class="content-txt-link" href="#">了解详情>></a>
-                                    </div>
-
-                                </div>
-                                <div class="content tab-pane-content-service">
-                                    <div class="img col-3">
-                                        <img src="/upload/shouye-background.jpg">
-                                    </div>
-                                    <div class="content-txt col-9">
-                                        <p class="content-txt-title">大数据计算引擎</p>
-                                        <p class="content-txt-remark">企业级数据计算与存储平台</p>
-                                        <a class="content-txt-link" href="#">了解详情>></a>
-                                    </div>
-
-                                </div>
-                                <div class="content tab-pane-content-service">
-                                    <div class="img col-3">
-                                        <img src="/upload/shouye-background.jpg">
-                                    </div>
-                                    <div class="content-txt col-9">
-                                        <p class="content-txt-title">大数据计算引擎</p>
-                                        <p class="content-txt-remark">企业级数据计算与存储平台</p>
-                                        <a class="content-txt-link" href="#">了解详情>></a>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="tab-pane-container">
-                            <div class="tab-pane-content"
-                                 data-aos="fade-up" data-aos-delay="100"
-                                 style="background: url('/upload/beijing-3.png');background-size:100% 100%;">
-                                <p class="tab-pane-content-title">tab-1-1</p>
-                                <div class="content tab-pane-content-service">
-                                    <div class="img col-3">
-                                        <img src="/upload/shouye-background.jpg">
-                                    </div>
-                                    <div class="content-txt col-9">
-                                        <p class="content-txt-title">大数据计算引擎</p>
-                                        <p class="content-txt-remark">企业级数据计算与存储平台</p>
-                                        <a class="content-txt-link" href="#">了解详情>></a>
-                                    </div>
-
-                                </div>
-                                <div class="content tab-pane-content-service">
-                                    <div class="img col-3">
-                                        <img src="/upload/shouye-background.jpg">
-                                    </div>
-                                    <div class="content-txt col-9">
-                                        <p class="content-txt-title">大数据计算引擎</p>
-                                        <p class="content-txt-remark">企业级数据计算与存储平台</p>
-                                        <a class="content-txt-link" href="#">了解详情>></a>
-                                    </div>
-
-                                </div>
-                                <div class="content tab-pane-content-service">
-                                    <div class="img col-3">
-                                        <img src="/upload/shouye-background.jpg">
-                                    </div>
-                                    <div class="content-txt col-9">
-                                        <p class="content-txt-title">大数据计算引擎</p>
-                                        <p class="content-txt-remark">企业级数据计算与存储平台</p>
-                                        <a class="content-txt-link" href="#">了解详情>></a>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
-
                     </div>
 
                 </div>
