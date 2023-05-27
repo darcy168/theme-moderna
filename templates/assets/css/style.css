@@ -2745,12 +2745,11 @@ section {
 
 .tab-content-index_cases .tab-pane .tab-pane-container .tab-pane-content {
     padding: 0px !important;
-    background: #fff;
 }
 
 
-.tab-content-index_cases .tab-pane .tab-pane-container {
-    background: rgb(252 252 252 / 70%);
+.tab-content-index_cases-container {
+    background: rgb(252 252 252 / 50%);
 }
 
 .content-case-title {
@@ -2799,6 +2798,7 @@ section {
     line-height: 40px;
     float: left;
     margin-top: 30px;
+    text-align: center;
 
 }
 
@@ -2870,7 +2870,7 @@ section {
     0% {
         transform: translateX(0px);
     }
-    75% {
+    50% {
         transform: translateX(75px);
     }
     100% {
