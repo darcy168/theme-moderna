@@ -2910,5 +2910,35 @@ section {
     padding: 0px 0px 20px 0px;
 }
 
+.data-purecounter-outer {
+    height: 78px;
+}
 
+.data-purecounter-outer .purecounter {
+    width: 50%;
+    text-align: right;
+    float: left;
+}
+
+
+.data-purecounter-unit {
+    width: 50%;
+    text-align: left;
+    float: left;
+    color: #fff !important;
+    font-weight: bold;
+    font-size: 30px !important;
+    height: 48px;
+    line-height: 48px;
+    display: inline-block !important;
+    padding-left: 10px;
+}
+
+.facts-container-index p {
+    font-size: 22px !important;
+    position: relative;
+    display: inline-block;
+    left: -36px;
+
+}
 

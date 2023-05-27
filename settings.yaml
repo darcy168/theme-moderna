@@ -350,7 +350,6 @@ spec:
                       name: url
                       label: 客户案例logo
                       value:
-
     - group: home_fact
       label: 首页-统计信息
       formSchema:
@@ -365,28 +364,26 @@ spec:
               value: false
             - label: 是
               value: true
-        - $formkit: repeater
-          name: carousel
-          label: 轮播块
+        - $formkit: text
+          name: background
+          label: 统计信息背景图
           value:
-            - title: Smart OS
-              desc: Smart OS 是一站式的开源持续测试平台，遵循 GPL v3 开源许可协议，涵盖测试跟踪、接口测试、UI 测试和性能测试等功能，全面兼容 JMeter、Selenium 等主流开源标准，有效助力开发和测试团队充分利用云弹性进行高度可扩展的自动化测试，加速高质量的软件交付。
-              url: https://Smart OS.io
-            - title: Smart OS
-              desc: Smart OS 是开源的数据可视化分析工具，帮助用户快速分析数据并洞察业务趋势，从而实现业务的改进与优化。Smart OS 支持丰富的数据源连接，能够通过拖拉拽方式快速制作图表，并可以方便地与他人分享。
-              url: https://Smart OS.io
+        - $formkit: repeater
+          name: header_num_items
+          label: 统计信息展示条目
+          help: 支持被12整除的数量，移动端每行只显示2个，所以最好的数量是2/4
           children:
             - $formkit: text
-              name: title
-              label: 标题
+              name: name
+              label: 名称
               value:
             - $formkit: text
-              name: desc
-              label: 描述
+              name: num
+              label: 数量
               value:
-            - $formkit: url
-              name: url
-              label: 跳转地址
+            - $formkit: text
+              name: unit
+              label: 单位
               value:
     - group: home_friend
       label: 首页-合作商
