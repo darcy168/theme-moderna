@@ -2670,7 +2670,7 @@ section {
 
 .content-inner_nav {
     display: inline-block;
-    min-width: 100px;
+    min-width: 150px;
     padding-top: 26px !important;
     border: 0px;
 }
@@ -2733,6 +2733,7 @@ section {
 
 .tab-content-index_cases-container {
     background: rgb(252 252 252 / 70%);
+    width: 100%;
 }
 
 .content-case-title {

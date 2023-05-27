@@ -305,7 +305,7 @@ spec:
           children:
             - $formkit: text
               name: title
-              label: 点击切换分类类型按钮-标题
+              label: 点击切换方案类型按钮-标题
               value:
             - $formkit: repeater
               name: children_service_title
@@ -331,7 +331,7 @@ spec:
                       value:
                     - $formkit: text
                       name: background
-                      label: 缩略图
+                      label: 背景图
                       value:
                     - $formkit: text
                       name: url
