@@ -273,7 +273,7 @@ spec:
                       label: 跳转链接
                       value:
     - group: home_case
-      label: 首页-服务案例
+      label: 首页-解决方案
       formSchema:
         - $formkit: radio
           name: show_home_case
@@ -286,29 +286,76 @@ spec:
               value: false
             - label: 是
               value: true
-        - $formkit: repeater
-          name: carousel
-          label: 轮播块
+        - $formkit: text
+          name: title
+          label: 分类标题
           value:
-            - title: Smart OS
-              desc: Smart OS 是一站式的开源持续测试平台，遵循 GPL v3 开源许可协议，涵盖测试跟踪、接口测试、UI 测试和性能测试等功能，全面兼容 JMeter、Selenium 等主流开源标准，有效助力开发和测试团队充分利用云弹性进行高度可扩展的自动化测试，加速高质量的软件交付。
-              url: https://Smart OS.io
-            - title: Smart OS
-              desc: Smart OS 是开源的数据可视化分析工具，帮助用户快速分析数据并洞察业务趋势，从而实现业务的改进与优化。Smart OS 支持丰富的数据源连接，能够通过拖拉拽方式快速制作图表，并可以方便地与他人分享。
-              url: https://Smart OS.io
+        - $formkit: text
+          name: remark
+          label: 分类描述
+          value:
+        - $formkit: text
+          name: background
+          label: 背景图
+          value:
+        - $formkit: repeater
+          name: service
+          label: 服务分类
+          value:
           children:
             - $formkit: text
               name: title
-              label: 标题
+              label: 点击切换分类类型按钮-标题
               value:
-            - $formkit: text
-              name: desc
-              label: 描述
+            - $formkit: repeater
+              name: children_service_title
+              label: 子分类
               value:
-            - $formkit: url
-              name: url
-              label: 跳转地址
-              value:
+              children:
+                - $formkit: text
+                  name: title
+                  label: 子分类标题
+                  value:
+                - $formkit: repeater
+                  name: grandchildren_service_title
+                  label: 节点
+                  value:
+                  children:
+                    - $formkit: text
+                      name: title
+                      label: 名称
+                      value:
+                    - $formkit: text
+                      name: remark
+                      label: 描述
+                      value:
+                    - $formkit: text
+                      name: background
+                      label: 缩略图
+                      value:
+                    - $formkit: text
+                      name: url
+                      label: 跳转链接
+                      value:
+                    - $formkit: repeater
+                      name: attributes
+                      label: 解决方案特性
+                      value:
+                      children:
+                        - $formkit: text
+                          name: title
+                          label: 特性
+                          value:
+                    - $formkit: repeater
+                      name: customers
+                      label: 客户案例logo
+                      value:
+                      children:
+                        - $formkit: text
+                          name: url
+                          label: 客户案例logo
+                          value:
+
     - group: home_fact
       label: 首页-统计信息
       formSchema:

@@ -2414,9 +2414,12 @@ section {
 .index_services_nav .nav-item .active, .index_cases_nav .nav-item .active {
     color: #ffffff;
     background-size: 100%;
+    border-radius: 0px;
 }
 
-.index_services_nav .nav-item .active, .index_cases_nav .nav-item .active {
+.index_cases_nav .nav-item .active {
+    color: #ffffff;
+    background: #1d78ff;
     border-radius: 0px;
 }
 
@@ -2498,7 +2501,6 @@ section {
     display: inline-block;
     float: left;
 }
-
 
 
 .content-txt-remark {
