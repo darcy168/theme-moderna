@@ -199,6 +199,191 @@ spec:
                   name: desc
                   label: 描述
                   value: ""   
+    - group: home_service
+      label: 首页-服务分类
+      formSchema:
+        - $formkit: radio
+          name: show_home_service
+          id: show_home_service
+          key: show_home_service
+          label: 是否开启本节点?
+          value: true
+          options:
+            - label: 否
+              value: false
+            - label: 是
+              value: true
+        - $formkit: repeater
+          name: carousel
+          label: 轮播块
+          value:
+            - title: Smart OS
+              desc: Smart OS 是一站式的开源持续测试平台，遵循 GPL v3 开源许可协议，涵盖测试跟踪、接口测试、UI 测试和性能测试等功能，全面兼容 JMeter、Selenium 等主流开源标准，有效助力开发和测试团队充分利用云弹性进行高度可扩展的自动化测试，加速高质量的软件交付。
+              url: https://Smart OS.io
+            - title: Smart OS
+              desc: Smart OS 是开源的数据可视化分析工具，帮助用户快速分析数据并洞察业务趋势，从而实现业务的改进与优化。Smart OS 支持丰富的数据源连接，能够通过拖拉拽方式快速制作图表，并可以方便地与他人分享。
+              url: https://Smart OS.io
+          children:
+            - $formkit: text
+              name: title
+              label: 标题
+              value:
+            - $formkit: text
+              name: desc
+              label: 描述
+              value:
+            - $formkit: url
+              name: url
+              label: 跳转地址
+              value:
+    - group: home_case
+      label: 首页-服务案例
+      formSchema:
+        - $formkit: radio
+          name: show_home_case
+          id: show_home_case
+          key: show_home_case
+          label: 是否开启本节点?
+          value: true
+          options:
+            - label: 否
+              value: false
+            - label: 是
+              value: true
+        - $formkit: repeater
+          name: carousel
+          label: 轮播块
+          value:
+            - title: Smart OS
+              desc: Smart OS 是一站式的开源持续测试平台，遵循 GPL v3 开源许可协议，涵盖测试跟踪、接口测试、UI 测试和性能测试等功能，全面兼容 JMeter、Selenium 等主流开源标准，有效助力开发和测试团队充分利用云弹性进行高度可扩展的自动化测试，加速高质量的软件交付。
+              url: https://Smart OS.io
+            - title: Smart OS
+              desc: Smart OS 是开源的数据可视化分析工具，帮助用户快速分析数据并洞察业务趋势，从而实现业务的改进与优化。Smart OS 支持丰富的数据源连接，能够通过拖拉拽方式快速制作图表，并可以方便地与他人分享。
+              url: https://Smart OS.io
+          children:
+            - $formkit: text
+              name: title
+              label: 标题
+              value:
+            - $formkit: text
+              name: desc
+              label: 描述
+              value:
+            - $formkit: url
+              name: url
+              label: 跳转地址
+              value:
+    - group: home_fact
+      label: 首页-统计信息
+      formSchema:
+        - $formkit: radio
+          name: show_home_fact
+          id: show_home_fact
+          key: show_home_fact
+          label: 是否开启本节点?
+          value: true
+          options:
+            - label: 否
+              value: false
+            - label: 是
+              value: true
+        - $formkit: repeater
+          name: carousel
+          label: 轮播块
+          value:
+            - title: Smart OS
+              desc: Smart OS 是一站式的开源持续测试平台，遵循 GPL v3 开源许可协议，涵盖测试跟踪、接口测试、UI 测试和性能测试等功能，全面兼容 JMeter、Selenium 等主流开源标准，有效助力开发和测试团队充分利用云弹性进行高度可扩展的自动化测试，加速高质量的软件交付。
+              url: https://Smart OS.io
+            - title: Smart OS
+              desc: Smart OS 是开源的数据可视化分析工具，帮助用户快速分析数据并洞察业务趋势，从而实现业务的改进与优化。Smart OS 支持丰富的数据源连接，能够通过拖拉拽方式快速制作图表，并可以方便地与他人分享。
+              url: https://Smart OS.io
+          children:
+            - $formkit: text
+              name: title
+              label: 标题
+              value:
+            - $formkit: text
+              name: desc
+              label: 描述
+              value:
+            - $formkit: url
+              name: url
+              label: 跳转地址
+              value:
+    - group: home_friend
+      label: 首页-合作商
+      formSchema:
+        - $formkit: radio
+          name: show_home_friend
+          id: show_home_friend
+          key: show_home_friend
+          label: 是否开启本节点?
+          value: true
+          options:
+            - label: 否
+              value: false
+            - label: 是
+              value: true
+        - $formkit: repeater
+          name: carousel
+          label: 轮播块
+          value:
+            - title: Smart OS
+              desc: Smart OS 是一站式的开源持续测试平台，遵循 GPL v3 开源许可协议，涵盖测试跟踪、接口测试、UI 测试和性能测试等功能，全面兼容 JMeter、Selenium 等主流开源标准，有效助力开发和测试团队充分利用云弹性进行高度可扩展的自动化测试，加速高质量的软件交付。
+              url: https://Smart OS.io
+            - title: Smart OS
+              desc: Smart OS 是开源的数据可视化分析工具，帮助用户快速分析数据并洞察业务趋势，从而实现业务的改进与优化。Smart OS 支持丰富的数据源连接，能够通过拖拉拽方式快速制作图表，并可以方便地与他人分享。
+              url: https://Smart OS.io
+          children:
+            - $formkit: text
+              name: title
+              label: 标题
+              value:
+            - $formkit: text
+              name: desc
+              label: 描述
+              value:
+            - $formkit: url
+              name: url
+              label: 跳转地址
+              value:
+    - group: home_certificate
+      label: 首页-荣誉资质
+      formSchema:
+        - $formkit: radio
+          name: show_home_certificate
+          id: show_home_certificate
+          key: show_home_certificate
+          label: 是否开启本节点?
+          value: true
+          options:
+            - label: 否
+              value: false
+            - label: 是
+              value: true
+        - $formkit: repeater
+          name: carousel
+          label: 轮播块
+          value:
+            - title: Smart OS
+              desc: Smart OS 是一站式的开源持续测试平台，遵循 GPL v3 开源许可协议，涵盖测试跟踪、接口测试、UI 测试和性能测试等功能，全面兼容 JMeter、Selenium 等主流开源标准，有效助力开发和测试团队充分利用云弹性进行高度可扩展的自动化测试，加速高质量的软件交付。
+              url: https://Smart OS.io
+            - title: Smart OS
+              desc: Smart OS 是开源的数据可视化分析工具，帮助用户快速分析数据并洞察业务趋势，从而实现业务的改进与优化。Smart OS 支持丰富的数据源连接，能够通过拖拉拽方式快速制作图表，并可以方便地与他人分享。
+              url: https://Smart OS.io
+          children:
+            - $formkit: text
+              name: title
+              label: 标题
+              value:
+            - $formkit: text
+              name: desc
+              label: 描述
+              value:
+            - $formkit: url
+              name: url
+              label: 跳转地址
+              value:
     - group: service
       label: 产品服务
       formSchema:

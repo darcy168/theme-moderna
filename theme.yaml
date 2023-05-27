@@ -5,15 +5,15 @@ metadata:
 spec:
   displayName: 沉浸式商务官网主题
   author:
-    name: 张秀春
+    name: Darcy.zhang
     website: "https://www.doublespring.top"
-  description: 沉浸式商务官网主题
+  description: 沉浸式商务官网主题(尊享版)
   logo: "/themes/moderna-template/assets/img/favicon.png"
   website: "https://www.doublespring.top"
   repo: "https://www.doublespring.top"
   settingName: "theme-doublespring-setting"
   configMapName: "theme-doublespring-configMap"
-  version: "1.0"
+  version: "6.8"
   require: "*"
   customTemplates:
     page:
