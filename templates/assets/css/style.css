@@ -11,6 +11,10 @@
 body {
     font-family: "Open Sans", sans-serif;
     color: #444;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 a {
@@ -2533,7 +2537,7 @@ section {
     margin-bottom: 14px !important;
 }
 
-.tab-pane-content .content:hover {
+.tab-pane-content-service:hover {
     background-color: #f2f7fa;
     border-radius: 8px;
     box-shadow: 0 6px 10px 0 rgb(29 120 255 / 10%);
@@ -2650,12 +2654,6 @@ section {
     margin-bottom: 14px !important;
 }
 
-.tab-pane-content .content:hover {
-    background-color: #f2f7fa;
-    border-radius: 8px;
-    box-shadow: 0 6px 10px 0 rgb(29 120 255 / 10%);
-    cursor: pointer;
-}
 
 .tab-pane-content .content {
     width: 100%;
@@ -2758,3 +2756,125 @@ section {
 .tab-content-product_cases .tab-pane .tab-pane-container {
     background: rgb(252 252 252 / 70%);
 }
+
+.content-case-title {
+    font-size: 30px;
+    font-weight: 500;
+    color: #3d446e;
+    line-height: 48px;
+    text-align: left;
+}
+
+.content-case-remark {
+    font-size: 16px;
+    width: 80%;
+    margin-top: 16px;
+    font-weight: 400;
+    color: #64698b;
+    line-height: 24px;
+    text-align: left;
+}
+
+
+.content-case-attr-content {
+    height: 48px;
+    background: #fff;
+    border-radius: 4px;
+    color: #64698b;
+    line-height: 48px;
+    display: inline-block;
+    float: left;
+    margin-right: 30px;
+}
+
+.content-case-attr-content:before {
+    content: "➤ \a0";
+    color: #1d78ff;
+}
+
+.content-case-button-a {
+    border: 1px solid #1d78ff;
+    border-radius: 4px;
+    width: 160px;
+    height: 40px;
+    color: #1d78ff;
+    display: inline-block;
+    line-height: 40px;
+    float: left;
+    margin-top: 30px;
+
+}
+
+.content-case-button-a:hover {
+    cursor: pointer;
+}
+
+.content-case-button-image {
+    display: inline-block;
+    width: 170px;
+    float: left;
+    margin-right: 20px;
+    margin-top: 30px;
+
+}
+
+.content-case-image {
+    margin-bottom: 80px;
+}
+
+
+.facts-container .facts .container .row div .purecounter {
+    font-size: 48px;
+    font-family: DINPro-Bold, DINPro;
+    font-weight: 700;
+    color: #fff;
+}
+
+.facts-container .facts .container .row div p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.index_friend-title {
+    font-size: 42px;
+    font-weight: 600;
+    color: #353c58;
+    line-height: 59px;
+    text-align: center;
+}
+
+.index_friend-detail {
+    font-size: 18px;
+    padding: 16px 0;
+    font-weight: 400;
+    color: #3d4461;
+    line-height: 25px;
+    text-align: center;
+}
+
+.index_friend-gallery {
+    background: #f4f8ff;
+    margin: 40px 0;
+    padding: 20px;
+}
+
+.index_friend-gallery img {
+    width: 250px;
+    height: 80px;
+    margin-right: 20px;
+    animation: move 5s linear infinite;
+
+}
+
+@keyframes move {
+    /* 为什么设置 -800px ？公式：主图张数 * 单个图片宽度（每轮主图只有 4 张，4 张照片为一个周期，如果需要轮播的主图为 7、8、9...张，都一样） */
+    100% {
+        transform: translateX(10px);
+    }
+}
+
+
+
+
+

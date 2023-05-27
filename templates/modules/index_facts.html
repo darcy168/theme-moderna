@@ -1,0 +1,18 @@
+<div class="facts-container">
+    <section class="facts" data-aos="fade-up" style="background: url('/upload/facts.svg')">
+        <div class="container" th:with="itSize=${#arrays.length(theme.config.about.header_num_items)}">
+            <div class="row counters">
+                <div th:each="it : ${theme.config.about.header_num_items}"
+                     th:class="'col-lg-'+ ${12/itSize} + ' col-6 text-center'">
+
+        <span data-purecounter-start="0" th:data-purecounter-end="${it.num}" data-purecounter-duration="1"
+              class="purecounter">
+
+        </span>
+                    <p th:text="${it.name}"></p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</div>
