@@ -1,5 +1,5 @@
 <div class="facts-container facts-container-index" th:if="${theme.config.home_fact.show_home_fact}">
-    <section class="facts" data-aos="fade-up" th:style="'background: url('+${theme.config.home_fact.background}+');background-size:100% 100%;'">
+    <section class="facts" data-aos="fade-up" th:style="'background: url('+${theme.config.home_fact.background}+');background-size:100%;'">
         <div class="container" th:with="itSize=${#arrays.length(theme.config.home_fact.header_num_items)}">
             <div class="row counters">
                 <div th:each="it : ${theme.config.home_fact.header_num_items}"

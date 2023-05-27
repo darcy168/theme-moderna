@@ -2840,6 +2840,9 @@ section {
     background: #f4f8ff;
     margin: 40px 0;
     padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .index_friend-gallery img {
@@ -2942,3 +2945,6 @@ section {
 
 }
 
+.facts-container section {
+    padding: 60px 0px 20px 0px !important;
+}
