@@ -12,27 +12,42 @@
 
                 <ul class="index_services_nav nav nav-tabs row">
 
-                    <li class="nav-item">
-                        <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#tab-1">
-                            <h4>Modisit</h4>
+
+                    <!--?                    <div th:each="cs,csStat:${theme.config.home.carousel}"-->
+                    <!--?                         th:class="${csStat.index} == 0 ? 'carousel-item active' : 'carousel-item'">-->
+                    <!--?                        <div class="carousel-container">-->
+                    <!--?                            <h2 class="animate__animated animate__fadeInDown" th:text="${cs.title}"></h2>-->
+                    <!--?                            <p class="animate__animated animate__fadeInUp" th:text="${cs.desc}"></p>-->
+                    <!--?                            <a th:href="${cs.url}" class="btn-get-started animate__animated animate__fadeInUp">查看更多</a>-->
+                    <!--?                        </div>-->
+                    <!--?                    </div>-->
+
+                    <li class="nav-item" th:each="cs,csStat:${theme.config.home_service.service}">
+                        <a th:class="${csStat.index} == 0 ? 'nav-link active show' : 'nav-link'" data-bs-toggle="tab" th:data-bs-target="@{'#tab-'+${csStat.index}}">
+                            <h4 th:text="${cs.title}"></h4>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
-                            <h4>Praesenti</h4>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">
-                            <h4>Explica</h4>
-                        </a>
-                    </li>
+                    <!--?                    <li class="nav-item">-->
+                    <!--?                        <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#tab-1">-->
+                    <!--?                            <h4>Modisit</h4>-->
+                    <!--?                        </a>-->
+                    <!--?                    </li>-->
+                    <!--?                    <li class="nav-item">-->
+                    <!--?                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">-->
+                    <!--?                            <h4>Praesenti</h4>-->
+                    <!--?                        </a>-->
+                    <!--?                    </li>-->
+                    <!--?                    <li class="nav-item">-->
+                    <!--?                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">-->
+                    <!--?                            <h4>Explica</h4>-->
+                    <!--?                        </a>-->
+                    <!--?                    </li>-->
 
                 </ul>
 
                 <div class="tab-content">
 
-                    <div class="tab-pane active show" id="tab-1">
+                    <div class="tab-pane active show" id="tab-0">
                         <div class="tab-pane-container">
                             <div class="tab-pane-content"
                                  data-aos="fade-up" data-aos-delay="100"
@@ -93,10 +108,10 @@
 
                             </div>
                         </div>
+                    </div>
+                    <div class="tab-pane" id="tab-1">
                     </div>
                     <div class="tab-pane" id="tab-2">
-                    </div>
-                    <div class="tab-pane" id="tab-3">
                     </div>
 
                 </div>
