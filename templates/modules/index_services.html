@@ -11,24 +11,11 @@
                 </p>
 
                 <ul class="index_services_nav nav nav-tabs row">
-
-
-                    <!--?                    <div th:each="cs,csStat:${theme.config.home.carousel}"-->
-                    <!--?                         th:class="${csStat.index} == 0 ? 'carousel-item active' : 'carousel-item'">-->
-                    <!--?                        <div class="carousel-container">-->
-                    <!--?                            <h2 class="animate__animated animate__fadeInDown" th:text="${cs.title}"></h2>-->
-                    <!--?                            <p class="animate__animated animate__fadeInUp" th:text="${cs.desc}"></p>-->
-                    <!--?                            <a th:href="${cs.url}" class="btn-get-started animate__animated animate__fadeInUp">查看更多</a>-->
-                    <!--?                        </div>-->
-                    <!--?                    </div>-->
-
                     <li class="nav-item" th:each="cs,csStat:${theme.config.home_service.service}">
                         <a th:class="${csStat.index} == 0 ? 'nav-link active show' : 'nav-link'" data-bs-toggle="tab" th:data-bs-target="@{'#tab-'+${csStat.index}}" th:style="'background: url('+${cs.background}+') center no-repeat;background-size:100%;'">
                             <h4 th:text="${cs.title}"></h4>
                         </a>
                     </li>
-
-
                 </ul>
 
                 <div class="tab-content">
@@ -42,16 +29,16 @@
 
                                 <p class="tab-pane-content-title" th:if="${cs2.title}" th:text="${cs2.title}"></p>
 
-                                <div class="content tab-pane-content-service">
+                                <div class="content tab-pane-content-service" th:each="cs3:${cs2.grandchildren_service_title}">
 
                                     <div class="img col-3">
-                                        <img src="/upload/shouye-background.jpg">
+                                        <img th:src="${cs3.image}">
                                     </div>
 
                                     <div class="content-txt col-9">
-                                        <p class="content-txt-title">大数据计算引擎</p>
-                                        <p class="content-txt-remark">企业级数据计算与存储平台</p>
-                                        <a class="content-txt-link" href="#">了解详情>></a>
+                                        <p class="content-txt-title" th:text="${cs3.title}"></p>
+                                        <p class="content-txt-remark" th:text="${cs3.remark}"></p>
+                                        <a class="content-txt-link" th:href="${cs3.url}" target="_blank">了解更多>></a>
                                     </div>
 
                                 </div>
