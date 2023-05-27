@@ -1,4 +1,4 @@
-<section class="index_services" th:if="${theme.config.home_service.show_home_service}">
+<section class="index_services" th:if="${theme.config.home_service.show_home_service}" th:style="'background: url('+${theme.config.home_service.background}+');background-size:100% 100%;'">
 
     <div class="container">
         <section id="features" class="features">
@@ -23,7 +23,7 @@
                     <!--?                    </div>-->
 
                     <li class="nav-item" th:each="cs,csStat:${theme.config.home_service.service}">
-                        <a th:class="${csStat.index} == 0 ? 'nav-link active show' : 'nav-link'" data-bs-toggle="tab" th:data-bs-target="@{'#tab-'+${csStat.index}}">
+                        <a th:class="${csStat.index} == 0 ? 'nav-link active show' : 'nav-link'" data-bs-toggle="tab" th:data-bs-target="@{'#tab-'+${csStat.index}}" th:style="'background: url('+${cs.background}+') center no-repeat;background-size:100%;'">
                             <h4 th:text="${cs.title}"></h4>
                         </a>
                     </li>
@@ -33,14 +33,14 @@
 
                 <div class="tab-content">
 
-                    <div th:class="${csStat.index} == 0 ? 'tab-pane active show' : 'tab-pane'" th:each="cs,csStat:${theme.config.home_service.service}" th:id="@{'#tab-'+${csStat.index}}">
+                    <div th:class="${csStat.index} == 0 ? 'tab-pane active show' : 'tab-pane'" th:each="cs,csStat:${theme.config.home_service.service}" th:id="@{'tab-'+${csStat.index}}">
 
-                        <div class="tab-pane-container">
+                        <div class="tab-pane-container" th:each="cs2:${cs.children_service_title}">
                             <div class="tab-pane-content"
                                  data-aos="fade-up" data-aos-delay="100"
-                                 th:style="'background: url('+${cs.background}+');background-size:100% 100%;'">
+                                 th:style="'background: url('+${cs2.background}+');background-size:100% 100%;'">
 
-                                <p class="tab-pane-content-title" th:text="${cs.background}"></p>
+                                <p class="tab-pane-content-title" th:if="${cs2.title}" th:text="${cs2.title}"></p>
 
                                 <div class="content tab-pane-content-service">
 
@@ -59,10 +59,6 @@
 
                             </div>
                         </div>
-                    </div>
-                    <div class="tab-pane" id="tab-1">
-                    </div>
-                    <div class="tab-pane" id="tab-2">
                     </div>
 
                 </div>

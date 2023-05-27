@@ -221,6 +221,10 @@ spec:
           name: remark
           label: 分类描述
           value:
+        - $formkit: text
+          name: background
+          label: 背景图
+          value:
         - $formkit: repeater
           name: service
           label: 服务分类

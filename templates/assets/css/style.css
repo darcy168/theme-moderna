@@ -2384,7 +2384,6 @@ section {
 
 /* 产品 card 区域*/
 .index_services {
-    background: url(/upload/section-background.webp);
     padding: 30px 0px 20px 0px !important;
 }
 
@@ -2413,13 +2412,16 @@ section {
 }
 
 .index_services_nav .nav-item .active, .index_cases_nav .nav-item .active {
-    background: url(/upload/tab-beiing.svg) center no-repeat;
     color: #ffffff;
     background-size: 100%;
 }
 
 .index_services_nav .nav-item .active, .index_cases_nav .nav-item .active {
     border-radius: 0px;
+}
+
+.index_services_nav .nav-item a:not(.active) {
+    background: none !important;
 }
 
 .index_services_nav .nav-item a, .index_cases_nav .nav-item a {
