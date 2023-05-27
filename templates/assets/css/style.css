@@ -2462,7 +2462,6 @@ section {
 
 
 .tab-pane-content {
-    background: #ffffff;
     border-radius: 4px;
     padding: 10px;
     height: 100%;
@@ -2551,7 +2550,7 @@ section {
     margin-bottom: 30px;
 }
 
-.tab-pane-container {
+.index_services .container .features .tab-content .tab-pane .tab-pane-container {
     background: #ffffff;
     flex: 1 !important;
     text-align: center;
@@ -2662,14 +2661,6 @@ section {
     margin-bottom: 30px;
 }
 
-.tab-pane-container {
-    background: #ffffff;
-    flex: 1 !important;
-    text-align: center;
-    display: inline-block;
-    border-radius: 6px;
-    min-width: 300px;
-}
 
 .index_services-title {
     font-size: 42px;
@@ -2695,18 +2686,25 @@ section {
 
 
 .content-inner_nav {
-    width: 10%;
-    display: inline-block
+    display: inline-block;
+    min-width: 100px;
+    padding-top: 26px !important;
+    border: 0px;
 }
 
 .content-inner_content {
-    width: 90%;
     float: right
 }
 
 .content-inner_nav .nav-item {
     padding-bottom: 0px !important;
 }
+
+.content-inner_nav .nav-item a h4:before {
+    content: "➤ \a0";
+    color: #1d78ff;
+}
+
 
 .content-inner_nav .nav-item .nav-link {
     border-radius: 0px !important;
@@ -2747,11 +2745,9 @@ section {
 
 .tab-content-index_cases .tab-pane .tab-pane-container .tab-pane-content {
     padding: 0px !important;
+    background: #fff;
 }
 
-.content-inner_nav {
-    padding-top: 26px !important
-}
 
 .tab-content-index_cases .tab-pane .tab-pane-container {
     background: rgb(252 252 252 / 70%);
@@ -2785,6 +2781,7 @@ section {
     display: inline-block;
     float: left;
     margin-right: 30px;
+    min-width: 200px;
 }
 
 .content-case-attr-content:before {
@@ -2862,15 +2859,22 @@ section {
 .index_friend-gallery img {
     width: 250px;
     height: 80px;
-    margin-right: 20px;
-    animation: move 5s linear infinite;
+    padding-right: 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    animation: move 5s ease-in-out infinite;
 
 }
 
 @keyframes move {
-    /* 为什么设置 -800px ？公式：主图张数 * 单个图片宽度（每轮主图只有 4 张，4 张照片为一个周期，如果需要轮播的主图为 7、8、9...张，都一样） */
+    0% {
+        transform: translateX(0px);
+    }
+    50% {
+        transform: translateX(50px);
+    }
     100% {
-        transform: translateX(10px);
+        transform: translateX(0px);
     }
 }
 
