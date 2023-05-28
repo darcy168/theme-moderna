@@ -2948,3 +2948,30 @@ section {
 .facts-container section {
     padding: 60px 0px 20px 0px !important;
 }
+
+
+@media (max-width: 576px) {
+    .logo img {
+        max-height: 26px !important;
+    }
+
+    .logo span {
+        font-size: 24px !important;
+    }
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 992px) {
+
+}
+
+@media (min-width: 1200px) {
+
+}
+
+@media (min-width: 1400px) {
+
+}

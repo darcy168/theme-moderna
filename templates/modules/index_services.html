@@ -12,7 +12,7 @@
 
                 <ul class="index_services_nav nav nav-tabs row">
                     <li class="nav-item" th:each="cs,csStat:${theme.config.home_service.service}">
-                        <a th:class="${csStat.index} == 0 ? 'nav-link active show' : 'nav-link'" data-bs-toggle="tab" th:data-bs-target="@{'#tab-'+${csStat.index}}" th:style="'background: url('+${cs.background}+') center no-repeat;background-size:100%;'">
+                        <a th:class="${csStat.index} == 0 ? 'nav-link active show' : 'nav-link'" data-bs-toggle="tab" th:data-bs-target="@{'#tab-'+${csStat.index}}" th:style="'background: url('+${cs.background}+') center no-repeat;background-size:cover;'">
                             <h4 th:text="${cs.title}"></h4>
                         </a>
                     </li>
