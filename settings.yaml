@@ -78,7 +78,7 @@ spec:
               label: 描述
               value: 
         - $formkit: radio
-          name: show_why_us
+          name: show_home_why_us
           id: show_home_why_us
           key: show_home_why_us
           label: 显示介绍块
@@ -97,12 +97,12 @@ spec:
           if: "$get(show_home_why_us).value"
           name: why_video_url
           label: 视频地址
-          value: 
+          value:
         - $formkit: repeater
           if: "$get(show_home_why_us).value"
           name: why_us_items
           label: 介绍条目
-          value: 
+          value:
             - icon: bx-fingerprint
               title: 核心价值观
               desc: 软件用起来才有价值，才有改进的机会！
@@ -113,16 +113,16 @@ spec:
             - $formkit: text
               name: icon
               label: 图标
-              value: 
+              value:
               help: 选择boxicons的icon样式
             - $formkit: text
               name: title
               label: 标题
-              value: 
+              value:
             - $formkit: text
               name: desc
               label: 描述
-              value: 
+              value:
         - $formkit: radio
           name: show_features
           id: show_home_features
@@ -148,7 +148,7 @@ spec:
           if: "$get(show_home_features).value"
           name: features_items
           label: 优势条目
-          value: 
+          value:
             - img: /themes/moderna-template/assets/img/features-1.svg
               title: 努力成为世界第一
               desc: 我们坚信我们将超越世界上所有的公司
@@ -176,12 +176,12 @@ spec:
               items:
                 - desc: 服务第一
                 - desc: 质量第一
-                - desc: 福利第一            
-          children: 
+                - desc: 福利第一
+          children:
             - $formkit: attachment
               name: img
               label: 图片
-              value: 
+              value:
             - $formkit: text
               name: title
               label: 标题
@@ -189,7 +189,7 @@ spec:
             - $formkit: text
               name: desc
               label: 描述
-              value: 
+              value:
             - $formkit: repeater
               name: items
               label: 描述条目
@@ -198,7 +198,7 @@ spec:
                 - $formkit: text
                   name: desc
                   label: 描述
-                  value: ""   
+                  value: ""
     - group: home_service
       label: 首页-服务分类
       formSchema:
