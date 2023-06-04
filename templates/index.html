@@ -42,11 +42,11 @@
     <th:block th:replace="~{modules/index_certificates}"/>
 
     <!-- ======= Services Section ======= -->
-    <section class="services">
+    <section class="services" th:if="${theme.config.home.show_home_qiyewenhua}">
         <div class="container">
 
-            <div class="row" th:with="srSize = ${#arrays.length(theme.config.home.service)}">
-                <div th:each="sr,srStat:${theme.config.home.service}"
+            <div class="row" th:with="srSize = ${#arrays.length(theme.config.home.home_qiyewenhua)}">
+                <div th:each="sr,srStat:${theme.config.home.home_qiyewenhua}"
                      th:class="'col-lg-'+ 12/${srSize} + ' col-md-6 d-flex align-items-stretch'"
                      th:data-aos-delay="${srStat.index}*100" data-aos="fade-up">
                     <div class="icon-box-pink icon-box">

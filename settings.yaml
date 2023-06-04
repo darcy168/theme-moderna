@@ -35,9 +35,9 @@ spec:
           label: 轮播块背景图片
           value: /themes/moderna-template/assets/img/hero-bg.jpg
         - $formkit: radio
-          name: show_card
-          id: show_home_card
-          key: show_home_card
+          name: show_home_qiyewenhua
+          id: show_home_qiyewenhua
+          key: show_home_qiyewenhua
           label: 显示卡片块
           value: true
           options:
@@ -46,8 +46,8 @@ spec:
             - label: 否
               value: false
         - $formkit: repeater
-          if: "$get(show_home_card).value"
-          name: service
+          if: "$get(show_home_qiyewenhua).value"
+          name: home_qiyewenhua
           label: 企业文化
           help: 必须是四个的排版 目前不支持其他的
           value: 
