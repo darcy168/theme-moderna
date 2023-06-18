@@ -1,4 +1,4 @@
-<section class="index_cases" th:if="${theme.config.home_case.show_home_case}" th:style="'background: url('+${theme.config.home_case.background}+');background-size:100% 100%;'">
+<section class="index_cases" th:if="${theme.config.home_case.show_home_case}" th:style="'background: url('+${theme.config.home_case.background}+');background-size:cover;'">
 
     <div class="container">
         <section id="features" class="features">
@@ -44,7 +44,7 @@
                                                 <div class="tab-pane-container">
                                                     <div class="tab-pane-content"
                                                          data-aos="fade-up" data-aos-delay="100"
-                                                         th:style="'background: url('+${cs2.background}+');background-size:100% 100%; padding: 20px 30px!important;'">
+                                                         th:style="'background: url('+${cs2.background}+');background-size:cover; padding: 20px 30px!important;'">
 
                                                         <div class="content col-12">
                                                             <p class="content-case-title col-12" th:text="${cs2.title}"></p>

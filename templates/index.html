@@ -5,8 +5,11 @@
 
 <body>
 
-<th:block th:replace="~{modules/header::goPage('home')}"/>
-<!-- ======= Hero Section ======= -->
+<div class="menu-page">
+    <!-- ======= Header ======= -->
+    <th:block th:replace="~{modules/header::goPage('home')}"/>
+    <!-- End Header -->
+</div><!-- ======= Hero Section ======= -->
 <section id="hero" class="d-flex justify-cntent-center align-items-center">
     <div id="heroCarousel" class="container carousel carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
 
@@ -30,7 +33,7 @@
 
     </div>
     <div id="hero-bg"
-         th:style="'background: url('+${theme.config.home.carousel_bg_img}+') center top no-repeat;'"/>
+         th:style="'background: url('+${theme.config.home.carousel_bg_img}+')'"/>
 </section><!-- End Hero -->
 
 <main id="main">

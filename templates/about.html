@@ -4,7 +4,11 @@
 
 <body>
 
-<th:block th:replace="~{modules/header::goPage(${singlePage.spec.slug})}"/>
+<div class="menu-page">
+    <!-- ======= Header ======= -->
+    <th:block th:replace="~{modules/header::goPage(${singlePage.spec.slug})}"/>
+    <!-- End Header -->
+</div>
 <!-- ======= Hero Section ======= -->
 <div id="other_hero">
     <section id="hero" class="d-flex justify-cntent-center align-items-center">

@@ -1,78 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<th:block th:replace="~{modules/import}" />
+<th:block th:replace="~{modules/import}"/>
 
 
 <body>
 
-  <!-- ======= Header ======= -->
-  <th:block th:replace="~{modules/header::goPage(${singlePage.spec.slug})}" />
-  <!-- End Header -->
-  <!-- ======= Hero Section ======= -->
-  <div id="other_hero">
+<div class="menu-page">
+    <!-- ======= Header ======= -->
+    <th:block th:replace="~{modules/header::goPage(${singlePage.spec.slug})}"/>
+    <!-- End Header -->
+</div>
+<!-- ======= Hero Section ======= -->
+<div id="other_hero">
     <section id="hero" class="d-flex justify-cntent-center align-items-center">
-      <div id="heroCarousel" class="container carousel carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+        <div id="heroCarousel" class="container carousel carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
 
-        <!-- Slide 1 -->
-        <div th:each="cs,csStat:${theme.config.team.carousel}"
-             th:class="${csStat.index} == 0 ? 'carousel-item active' : 'carousel-item'">
-          <div class="carousel-container">
-            <h2 class="animate__animated animate__fadeInDown" th:text="${cs.title}"></h2>
-            <p class="animate__animated animate__fadeInUp" th:text="${cs.desc}"></p>
-            <a th:href="${cs.url}" class="btn-get-started animate__animated animate__fadeInUp">查看更多</a>
-          </div>
+            <!-- Slide 1 -->
+            <div th:each="cs,csStat:${theme.config.team.carousel}"
+                 th:class="${csStat.index} == 0 ? 'carousel-item active' : 'carousel-item'">
+                <div class="carousel-container">
+                    <h2 class="animate__animated animate__fadeInDown" th:text="${cs.title}"></h2>
+                    <p class="animate__animated animate__fadeInUp" th:text="${cs.desc}"></p>
+                    <a th:href="${cs.url}" class="btn-get-started animate__animated animate__fadeInUp">查看更多</a>
+                </div>
+            </div>
+
+            <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
+            </a>
+
+            <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"></span>
+            </a>
+
         </div>
-
-        <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
-        </a>
-
-        <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
-          <span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"></span>
-        </a>
-
-      </div>
-      <div id="hero-bg"
-           th:style="'background: url('+${theme.config.team.carousel_bg_img}+') center top no-repeat;'"/>
+        <div id="hero-bg"
+             th:style="'background: url('+${theme.config.team.carousel_bg_img}+') center top no-repeat;'"/>
     </section>
-  </div>
-  <!-- End Hero -->
+</div>
+<!-- End Hero -->
 
-  <main id="main">
-
+<main id="main">
 
 
     <!-- ======= Team Section ======= -->
     <section class="team" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
-      <div class="container">
+        <div class="container">
 
-        <div class="row">
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" th:each="it : ${theme.config.team.items}">
-            <div class="member">
-              <div class="member-img">
-                <img th:src="@{${it.photo}}" class="img-max-height" alt="">
-                <div class="social" th:utext="${it.social}">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch" th:each="it : ${theme.config.team.items}">
+                    <div class="member">
+                        <div class="member-img">
+                            <img th:src="@{${it.photo}}" class="img-max-height" alt="">
+                            <div class="social" th:utext="${it.social}">
 
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h4 th:text="${it.name}"></h4>
+                            <span th:text="${it.localtion}"></span>
+                            <p th:text="${it.desc}"></p>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <div class="member-info">
-                <h4 th:text="${it.name}"></h4>
-                <span th:text="${it.localtion}"></span>
-                <p th:text="${it.desc}"></p>
-              </div>
             </div>
-          </div>
-        </div>
 
-      </div>
+        </div>
     </section><!-- End Team Section -->
 
-  </main><!-- End #main -->
+</main><!-- End #main -->
 
-  <!-- ======= Footer ======= -->
-  <th:block th:replace="~{modules/footer}" />
-  <!-- End Footer -->
+<!-- ======= Footer ======= -->
+<th:block th:replace="~{modules/footer}"/>
+<!-- End Footer -->
 </body>
 
 </html>

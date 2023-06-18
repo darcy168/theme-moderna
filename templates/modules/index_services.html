@@ -1,4 +1,4 @@
-<section class="index_services" th:if="${theme.config.home_service.show_home_service}" th:style="'background: url('+${theme.config.home_service.background}+');background-size:100% 100%;'">
+<section class="index_services" th:if="${theme.config.home_service.show_home_service}" th:style="'background: url('+${theme.config.home_service.background}+');background-size:cover;'">
 
     <div class="container">
         <section id="features" class="features">
@@ -12,7 +12,7 @@
 
                 <ul class="index_services_nav nav nav-tabs row">
                     <li class="nav-item" th:each="cs,csStat:${theme.config.home_service.service}">
-                        <a th:class="${csStat.index} == 0 ? 'nav-link active show' : 'nav-link'" data-bs-toggle="tab" th:data-bs-target="@{'#tab-'+${csStat.index}}" th:style="'background: url('+${cs.background}+') center no-repeat;background-size:cover;'">
+                        <a th:class="${csStat.index} == 0 ? 'nav-link active show' : 'nav-link'" data-bs-toggle="tab" th:data-bs-target="@{'#tab-'+${csStat.index}}" th:style="'background: url('+${cs.background}+') ;background-size:cover;'">
                             <h4 th:text="${cs.title}"></h4>
                         </a>
                     </li>
@@ -25,7 +25,7 @@
                         <div class="tab-pane-container" th:each="cs2:${cs.children_service_title}">
                             <div class="tab-pane-content"
                                  data-aos="fade-up" data-aos-delay="100"
-                                 th:style="'background: url('+${cs2.background}+');background-size:100% 100%;'">
+                                 th:style="'background: url('+${cs2.background}+');background-size:cover;'">
 
                                 <p class="tab-pane-content-title" th:if="${cs2.title}" th:text="${cs2.title}"></p>
 
